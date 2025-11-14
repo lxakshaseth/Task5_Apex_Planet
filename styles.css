@@ -1,0 +1,109 @@
+
+:root{
+  --accent:#0ea5a3;
+  --accent2:#0b7285;
+  --bg:linear-gradient(180deg,#e8fffb 0%, #ffffff 60%);
+  --card:rgba(255,255,255,0.75);
+  --muted:#6b7280;
+  --radius:18px;
+  font-family: Inter, sans-serif;
+}
+body{margin:0;background:var(--bg);color:#062b2d}
+.container{max-width:1100px;margin:30px auto;padding:18px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.logo{width:58px;height:58px;border-radius:16px;
+background:linear-gradient(135deg,var(--accent),var(--accent2));
+display:flex;align-items:center;justify-content:center;
+color:white;font-size:22px;font-weight:800}
+
+.card{
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  padding:22px;
+  border-radius:var(--radius);
+  box-shadow:0 10px 30px rgba(0,0,0,0.12)
+}
+
+.search-row{display:flex;gap:10px;margin-bottom:18px}
+input{flex:1;padding:12px;border-radius:12px;border:1px solid #bee7e6;font-size:15px}
+.btn{
+  padding:12px 16px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+  font-size:15px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:420px 1fr;
+  gap:20px
+}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+.iconwrap{
+  width:120px;
+  height:120px;
+  background:white;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 20px rgba(0,0,0,0.1);
+  margin-bottom:18px;
+}
+.iconwrap img{
+  width:90px;
+  animation:float 3s ease-in-out infinite
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+
+.temp{
+  font-size:52px;
+  font-weight:800;
+  margin-top:10px;
+}
+.desc{color:var(--muted);margin-top:6px;font-size:15px}
+
+.stats{
+  display:flex;
+  gap:12px;
+  margin-top:18px
+}
+.stat{
+  flex:1;
+  background:white;
+  padding:12px;
+  border-radius:14px;
+  text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.06)
+}
+.stat .label{font-size:12px;color:var(--muted)}
+.stat .value{font-size:18px;font-weight:800;margin-top:4px}
+
+.aqi{
+  margin-top:20px;
+  padding:16px;
+  border-radius:16px;
+  background:linear-gradient(180deg,#fff4e6,#ffe9cc);
+  text-align:center;
+}
+.aqi-val{
+  font-size:32px;
+  font-weight:900;
+  margin-bottom:6px;
+}
+
+#map{
+  height:700px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.1)
+}
